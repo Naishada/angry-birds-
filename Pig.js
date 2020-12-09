@@ -8,7 +8,7 @@ class Pig extends Base {
         push();
         if (this.body.speed<6){
             super.display();
-            console.log(this.body.speed);
+            //console.log(this.body.speed);
         }
         else{
             World.remove(world,this.body);

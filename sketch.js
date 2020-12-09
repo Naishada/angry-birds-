@@ -14,8 +14,47 @@ var bird;
 var bg;
 var platform;
 var chain;
-
+var gameState = "onSling";
 //restitution
+
+//Types of data
+
+  //number
+  var num = 10;
+
+  //string
+  var string = "Hello World"
+
+  //Boolean
+  var bool = true
+
+  //Undefined
+  var object;
+  console.log(object)
+
+  //null
+  object = null
+  console.log(object)
+
+  //Data Structure
+  //Array
+  //index
+
+  var arr1 = [1,2,3,4,5]
+  console.log(arr1[3])
+
+  var arr2 = [12,"Naishada",null]
+
+  var arr3 = [[1,2],[2,3],[3,4]]
+  console.log(arr3[1])
+  console.log(arr3[1][0])
+  console.log(arr3.length)
+
+  arr3.push("Hello")
+  console.log(arr3)
+
+  arr3.pop()
+  console.log(arr3)
 
 function preload(){
    bg = loadImage("sprites/bg.png");  
@@ -75,10 +114,13 @@ function draw() {
   text(mouseX+","+mouseY,mouseX,mouseY);
 }
 function mouseDragged(){
-  Matter.Body.setPosition(bird.body,{x:mouseX,y:mouseY});
+  if(gameState === "onSling"){
+    Matter.Body.setPosition(bird.body,{x:mouseX,y:mouseY});
+  }
 }
 function mouseReleased(){
   chain.fly();
+  gameState  = "offSling";
 }
 function keyPressed(){
   if(keyCode === 32){
