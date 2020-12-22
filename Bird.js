@@ -19,7 +19,7 @@ class Bird extends Base{
        /*this.body.position.x = mouseX
         this.body.position.y = mouseY*/
         super.display();
-        if(this.body.speed>3&&this.body.position.x>230){
+        if(this.body.speed>10 &&this.body.position.x>230){
             var pos = [this.body.position.x,this.body.position.y];
             this.path.push(pos);
             for(var i = 0 ; i < this.path.length-1;i++){

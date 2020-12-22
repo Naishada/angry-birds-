@@ -15,7 +15,7 @@ class Slingshot{
         if(this.sling.bodyA){
             var posA = this.sling.bodyA.position
             var  posB = this.sling.pointB
-            if(posA.x<224){
+            if(posA.x<235){
                 push();
                 strokeWeight(6)
                 stroke(48,22,8);
@@ -25,7 +25,7 @@ class Slingshot{
                 image(this.sling3,posA.x-20,posA.y,15,30);
                 pop();
             }
-            if(posA.x>224){
+            if(posA.x>235){
                 push();
                 strokeWeight(6)
                 stroke(48,22,8);
